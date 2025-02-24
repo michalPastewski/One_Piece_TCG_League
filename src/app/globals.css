@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  --primary-color: #C8472C;
+  --secondary-color: #F8DE3C;
+  --secondary-light-color: #f8df3caf;
+  --accent-color: #105EDD;
+  --accent-light-color: #58ACF4;
+  --accent-dark-color: #0B3075;
+  --border-color: #412A1E;
+}
+
+/* TODO: create the dark mode color pallet */
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
