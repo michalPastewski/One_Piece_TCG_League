@@ -28,3 +28,22 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.nav-link-mobile {
+  @apply w-2/3 mx-auto pb-2 border-b border-border text-center text-lg;
+}
+.nav-link {
+  @apply border-b border-border text-center text-lg px-2 min-w-28;
+}
+
+.open-nav {
+  @apply left-0 transition-transform duration-75 ease-linear;
+}
+
+.close-nav {
+  @apply translate-x-[-75vw] transition-transform duration-75 ease-linear;
+}
+
+.basic-hover {
+  @apply hover:border-secondary hover:text-secondary;
+}
