@@ -1,7 +1,8 @@
 import { HeaderWrapper } from '@/components/ui/headerWrapper';
-export default function Home() {
+
+export default function About() {
   return (
-    <HeaderWrapper label="HELLO PAGE">
+    <HeaderWrapper label="ABOUT">
       <p>hello</p>
     </HeaderWrapper>
   );
