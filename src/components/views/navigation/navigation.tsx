@@ -1,7 +1,7 @@
 'use client';
 import NavLogo from '@/assets/image/nav_logo.png';
 import { useIsMobile } from '@/hooks/useMobile';
-import { NavigationMenu } from '@/ui/components/navigationMenu';
+import { NavigationMenu } from '@/components/views/navigation/navigationMenu';
 import { Menu } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
