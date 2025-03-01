@@ -33,7 +33,7 @@ body {
   @apply w-2/3 mx-auto pb-2 border-b border-border text-center text-lg;
 }
 .nav-link {
-  @apply border-b border-border text-center text-lg px-2 min-w-28;
+  @apply border-b border-border text-center text-base px-2 min-w-24 lg:text-lg;
 }
 
 .open-nav {
