@@ -37,13 +37,17 @@ body {
 }
 
 .open-nav {
-  @apply left-0 transition-transform duration-75 ease-linear;
+  @apply  translate-x-[74vw] transition-transform duration-75 ease-linear;
 }
 
 .close-nav {
-  @apply translate-x-[-75vw] transition-transform duration-75 ease-linear;
+  @apply  transition-transform duration-75 ease-linear;
 }
 
 .basic-hover {
   @apply hover:border-secondary hover:text-secondary;
+}
+
+.basic-active {
+  @apply active:text-accentLight active:border-accentLight;
 }

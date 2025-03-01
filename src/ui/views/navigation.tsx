@@ -1,11 +1,11 @@
 'use client';
 import NavLogo from '@/assets/image/nav_logo.png';
 import { useIsMobile } from '@/hooks/useMobile';
+import { NavigationMenu } from '@/ui/components/navigationMenu';
 import { Menu } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-import { NavigationMenu } from './ui/navigationMenu';
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
