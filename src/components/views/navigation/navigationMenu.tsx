@@ -41,7 +41,7 @@ export const NavigationMenu: React.FC<NavMenuProps> = ({
 
       {linksList.map((link, i) => {
         return isMobile ? (
-          <li key={i} className="nav-link-mobile basic-active">
+          <li key={i} className="nav-link-mobile basic-hover basic-active">
             <Link href={`/${linkFormatter(link)}`} onClick={handleOnClose}>
               {link}
             </Link>
