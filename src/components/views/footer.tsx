@@ -7,7 +7,11 @@ export const Footer = () => {
   return (
     <footer className="fixed flex items-center justify-between bottom-0 w-screen h-8 bg-primary p-2 md:p-4 lg:p-6">
       <Link href="/">
-        <Image src={Logo} alt="OPTCGL logo" className="w-6 h-auto" />
+        <Image
+          src={Logo}
+          alt="OPTCGL logo"
+          className="w-6 h-auto hover:scale-150 transition-transform ease-in-outz"
+        />
       </Link>
       <nav className="text-xs text-border p-2 ml-2">
         <ul className="flex gap-2">
