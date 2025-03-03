@@ -30,7 +30,7 @@ export const NavigationMenu: React.FC<NavMenuProps> = ({
           ? `absolute top-0 left-[-75vw] ${
               isOpen ? 'open-nav' : 'close-nav'
             } w-2/3 h-screen flex flex-col gap-8 bg-primary border-r-secondary border-r-8`
-          : 'flex h-14 items-center justify-between gap-4 shrink xl:max-w-1/2 xl:gap-8'
+          : 'flex h-12 items-center justify-between gap-4 shrink xl:max-w-1/2 xl:gap-8 bg-background rounded-2xl py-2 px-4'
       }>
       {isMobile && (
         <X
@@ -41,7 +41,9 @@ export const NavigationMenu: React.FC<NavMenuProps> = ({
 
       {linksList.map((link, i) => {
         return isMobile ? (
-          <li key={i} className="nav-link-mobile basic-hover basic-active">
+          <li
+            key={i}
+            className="nav-link-mobile basic-mobile-hover basic-active">
             <Link href={`/${linkFormatter(link)}`} onClick={handleOnClose}>
               {link}
             </Link>

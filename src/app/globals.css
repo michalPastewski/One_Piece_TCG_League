@@ -30,7 +30,7 @@ body {
 }
 
 .nav-link-mobile {
-  @apply w-2/3 mx-auto pb-2 border-b border-border text-center text-lg;
+  @apply w-2/3 mx-auto pb-2 border-b border-border text-center text-lg text-background;
 }
 .nav-link {
   @apply border-b border-border text-center text-base px-2 min-w-24 lg:text-lg;
@@ -44,10 +44,12 @@ body {
   @apply  transition-transform duration-75 ease-linear;
 }
 
-.basic-hover {
+.basic-mobile-hover {
   @apply hover:border-secondary hover:text-secondary;
 }
-
+.basic-hover {
+  @apply hover:bg-primary hover:rounded-2xl hover:text-secondary hover:p-2;
+}
 .basic-active {
   @apply active:text-accentLight active:border-accentLight;
 }
