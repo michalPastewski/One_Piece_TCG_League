@@ -1,8 +1,9 @@
-import { HeaderWrapper } from '@/components/ui/headerWrapper';
+import { Hero } from '@/components/views/home/hero';
+
 export default function Home() {
   return (
-    <HeaderWrapper label="HELLO PAGE">
-      <p>hello</p>
-    </HeaderWrapper>
+    <div id="hero" className="relative">
+     <Hero />
+    </div>
   );
 }

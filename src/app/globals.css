@@ -4,6 +4,7 @@
 
 :root {
   --background: #ffffff;
+  --opacity-background: #ffffffc3;
   --foreground: #171717;
 
   --primary-color: #C8472C;

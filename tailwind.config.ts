@@ -10,6 +10,7 @@ export default {
     extend: {
       colors: {
         background: 'var(--background)',
+        opacityBg: 'var(--opacity-background)',
         foreground: 'var(--foreground)',
 
         primary: 'var(--primary-color)',
@@ -19,6 +20,9 @@ export default {
         accentLight: 'var(--accent-light-color)',
         accentDark: 'var(--accent-dark-color)',
         border: 'var(--border-color)',
+      },
+      fontFamily: {
+        cartucho: ['Cartucho', 'sans-serif'],
       },
     },
   },
