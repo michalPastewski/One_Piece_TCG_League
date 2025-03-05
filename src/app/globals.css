@@ -54,3 +54,7 @@ body {
 .basic-active {
   @apply active:text-accentLight active:border-accentLight;
 }
+
+.header_3 {
+  @apply text-2xl mb-2 font-titanOne;
+}

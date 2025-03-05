@@ -1,4 +1,4 @@
-import { HeaderWrapper } from '@/components/ui/headerWrapper';
+import { HeaderWrapper } from '@/components/ui/pageWrapper';
 
 export default function Leadership() {
   return (

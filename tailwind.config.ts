@@ -22,7 +22,8 @@ export default {
         border: 'var(--border-color)',
       },
       fontFamily: {
-        cartucho: ['Cartucho', 'sans-serif'],
+        titanOne: ['var(--font-titan-one)'],
+        commissioner: ['var(--font-commissioner)'],
       },
     },
   },

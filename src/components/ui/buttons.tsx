@@ -16,9 +16,9 @@ export const SpecialButton: React.FC<SpecialButtonProp> = ({
       <Image
         src={Button_BG}
         alt="hero button background"
-        className="w-28 h-9"
+        className="w-28 h-9 md:w-36 md:h-12"
       />
-      <span className="absolute top-2.5 left-8 text-sm">{label}</span>
+      <span className="absolute top-2.5 md:top-3.5 left-8 text-sm md:text-base" >{label}</span>
       {children}
     </button>
   );

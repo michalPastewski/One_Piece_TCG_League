@@ -12,7 +12,7 @@ export const Navigation = () => {
   const isMobile: boolean = useIsMobile() ?? false;
 
   return (
-    <nav className="fixed flex items-center justify-between w-screen h-[60px] px-2 lg:px-4 z-10 bg-primary">
+    <nav className="fixed flex items-center justify-between w-screen h-[60px] px-2 lg:px-4 z-50 bg-primary font-commissioner">
       {isMobile && <Menu className="w-9 h-8" onClick={() => setIsOpen(true)} />}
       <Image
         src={NavLogo}

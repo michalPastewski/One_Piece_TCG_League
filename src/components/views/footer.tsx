@@ -5,10 +5,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export const Footer = () => {
-   const isMobile: boolean = useIsMobile() ?? false;
+  const isMobile: boolean = useIsMobile() ?? false;
 
   return (
-    <footer className="fixed flex items-center justify-between bottom-0 w-screen h-8 bg-primary p-2  md:py-4 lg:p-6">
+    <footer className="fixed flex items-center justify-between bottom-0 w-screen h-8 bg-primary p-2  md:py-4 lg:p-6 font-commissioner z-40">
       <div className="flex items-center">
         {!isMobile && (
           <Link href="/">
