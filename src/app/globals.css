@@ -4,6 +4,7 @@
 
 :root {
   --background: #ffffff;
+  --opacity-background: #ffffffc3;
   --foreground: #171717;
 
   --primary-color: #C8472C;
@@ -27,4 +28,45 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-link-mobile {
+  @apply w-2/3 mx-auto pb-2 border-b border-border text-center text-lg text-background;
+}
+.nav-link {
+  @apply border-b border-border text-center text-base px-2 min-w-24 lg:text-lg;
+}
+
+.open-nav {
+  @apply  translate-x-[74vw] transition-transform duration-75 ease-linear;
+}
+
+.close-nav {
+  @apply  transition-transform duration-75 ease-linear;
+}
+
+.basic-mobile-hover {
+  @apply hover:border-secondary hover:text-secondary;
+}
+.basic-hover {
+  @apply hover:bg-primary hover:rounded-2xl hover:text-secondary hover:p-2;
+}
+.basic-active {
+  @apply active:text-accentLight active:border-accentLight;
+}
+
+.header_3 {
+  @apply text-2xl mb-2 font-titanOne;
+}
+
+.circle_decoration {
+  @apply inline-block border border-border rounded-full w-3 h-3;
+}
+
+.circle_active {
+  @apply bg-primary scale-125;
+}
+
+.button_shadow {
+  box-shadow: 0px 1px 2px var(--border-color);
 }
