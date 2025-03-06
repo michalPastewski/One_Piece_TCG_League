@@ -7,7 +7,7 @@ export const PageWrapper: React.FC<PageWrapperProps> = ({
   label,
 }) => {
   return (
-    <main className="w-4/5 mx-auto  bg-green-600 z-20">
+    <main className="w-4/5 lg:w-3/5 xl:w-1/2 mx-auto z-20">
       {label && <header className="text-center">{label}</header>}
       {children}
     </main>
