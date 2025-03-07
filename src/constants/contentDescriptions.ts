@@ -1,5 +1,6 @@
-import { DESTRUCTION, TIMEOUT } from 'dns';
-import { title } from 'process';
+export const GENERAL_CONTENT = {
+  TITLE: 'ONE PIECE LEAGUE',
+};
 
 export const HOME = {
   HEADER: {
