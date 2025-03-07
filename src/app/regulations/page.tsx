@@ -1,9 +1,9 @@
-import { HeaderWrapper } from '@/components/ui/pageWrapper';
+import { PageWrapper } from '@/components/ui/pageWrapper';
 
 export default function Regulations() {
   return (
-    <HeaderWrapper label="REGULATIONS">
+    <PageWrapper label="REGULATIONS">
       <p>hello</p>
-    </HeaderWrapper>
+    </PageWrapper>
   );
 }
