@@ -26,7 +26,7 @@ export const REGULATION = {
         'The official Rules that this League will adhere to can be found on the Official One Piece TCG Website. All Rules, Bans and also Q&As regarding specific card of the One Piece TCG can be found here:',
       BUTTON: 'Official One Piece TCG Rules',
       CURRENT_BANSLIST: {
-        TITLES: 'Current Bans and restrictions:',
+        TITLE: 'Current Bans and restrictions:',
         BANS_SUBTITLE: 'Bans',
         BANS: 'Moby Dick, Cabaji, Sakazuki (Leader), Great Eruption, Reject, Law (Leader), Enies Lobby,',
         BANS_DESCRIPTION:

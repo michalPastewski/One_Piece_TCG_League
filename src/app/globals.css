@@ -14,6 +14,7 @@
   --accent-light-color: #58ACF4;
   --accent-dark-color: #0B3075;
   --border-color: #412A1E;
+  --shadow-color: #422a1d93;
 }
 
 /* TODO: create the dark mode color pallet */
@@ -69,4 +70,14 @@ body {
 
 .button_shadow {
   box-shadow: 0px 1px 2px var(--border-color);
+}
+
+.section_shadow {
+  box-shadow: 0px 0px 12px -6px var(--shadow-color);
+}
+
+.shape_text {
+  float: right;
+  /* shape-outside: circle(55%); */
+  shape-outside: ellipse(50% 50%);
 }
