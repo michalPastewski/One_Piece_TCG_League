@@ -1,17 +1,22 @@
+'use client';
 import { SpecialButton } from '@/components/ui/buttons';
 import { PageWrapper } from '@/components/ui/pageWrapper';
-import { RulesSection } from '@/components/views/regulations/rulesSection';
+import { Format } from '@/components/views/regulations/format';
+import { RulesSection } from '@/components/views/regulations/rules';
+import { useState } from 'react';
 
 export default function Regulations() {
+  const [isFormatView, setIsFormatView] = useState<boolean>(true);
+
   return (
     <PageWrapper label="REGULATIONS">
       <section
         id="regulation_nav"
         className="flex items-center justify-evenly mt-8 border-t border-b border-border rounded-lg py-4 md:py-8">
-        <SpecialButton label="Rules"></SpecialButton>
         <SpecialButton label="Format"></SpecialButton>
+        <SpecialButton label="Rules"></SpecialButton>
       </section>
-      <RulesSection />
+      {isFormatView ? <Format /> : <RulesSection />}
     </PageWrapper>
   );
 }

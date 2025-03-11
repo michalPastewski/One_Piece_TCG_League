@@ -80,14 +80,17 @@ export const REGULATION = {
     },
     MATCH_SYSTEM: {
       TITLE: 'Match System',
-      DESTRUCTION_1:
+      DESCRIPTION_1:
         "Every Matchup consists of 2 games to ensure that both players can go the 1 Don't nd Don curve. Each Matchup needs to be carried out in one of these 3 ways:",
       WAYS: {
         WAY_1: 'Offline locally if this is possible.',
         WAY_2: 'Online via webcams.',
         WAY_3: 'Via the Batsu App (OPTCG SIM).',
       },
-      DESTRUCTION_2:
+
+      DESCRIPTION_2:
+        'ALL GAMES NEED TO BE RECORDED AND NEED TO BE MADE AVAILABLE IN TIME FOR THE ORGANIZER TO CHECK THE RECORDINGS.',
+      DESCRIPTION_3:
         'The Matchups that need to be carried out zjaz given matchweek will be online in the beginning of the week and the players have one week to align the matches with their counterpart. That is why we need to use Discord to make basic communication possible.',
     },
     LEAGUE_POINT_SYSTEM: {
@@ -102,7 +105,7 @@ export const REGULATION = {
     },
     DECK_SUBMISSION: {
       TITLE: 'Deck Submission',
-      DESTRUCTION:
+      DESCRIPTION:
         'Decks need to be submitted before the start of the season. There will be 1 or 2 timings, when the Decks can be changed in a season which will be announced. The Leader cannot be changed in the season.',
     },
   },
