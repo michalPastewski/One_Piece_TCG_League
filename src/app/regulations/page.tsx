@@ -13,8 +13,12 @@ export default function Regulations() {
       <section
         id="regulation_nav"
         className="flex items-center justify-evenly mt-8 border-t border-b border-border rounded-lg py-4 md:py-8">
-        <SpecialButton label="Format"></SpecialButton>
-        <SpecialButton label="Rules"></SpecialButton>
+        <SpecialButton
+          label="Format"
+          onClick={() => setIsFormatView(true)}></SpecialButton>
+        <SpecialButton
+          label="Rules"
+          onClick={() => setIsFormatView(false)}></SpecialButton>
       </section>
       {isFormatView ? <Format /> : <RulesSection />}
     </PageWrapper>
