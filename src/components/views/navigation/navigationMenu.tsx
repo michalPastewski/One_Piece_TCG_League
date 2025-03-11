@@ -30,7 +30,7 @@ export const NavigationMenu: React.FC<NavMenuProps> = ({
           ? `absolute top-0 left-[-75vw] ${
               isOpen ? 'open-nav' : 'close-nav'
             } w-2/3 h-screen flex flex-col gap-8 bg-primary border-r-secondary border-r-8`
-          : 'flex h-12 items-center justify-between gap-4 shrink xl:max-w-1/2 xl:gap-8 bg-background rounded-2xl py-2 px-4'
+          : 'flex h-12 items-center justify-between gap-4 shrink xl:max-w-1/2 xl:gap-8 bg-background rounded-2xl py-2 px-4 z-50'
       }>
       {isMobile && (
         <X

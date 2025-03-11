@@ -1,16 +1,24 @@
 import { Footer } from '@/components/views/footer';
 import { Navigation } from '@/components/views/navigation/navigation';
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono, Ms_Madi } from 'next/font/google';
+import { Commissioner, Dangrek, Titan_One } from 'next/font/google';
 import './globals.css';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+const titanOne = Titan_One({
+  variable: '--font-titan-one',
+  weight: '400',
   subsets: ['latin'],
 });
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
+const commissioner = Commissioner({
+  variable: '--font-commissioner',
+  weight: '400',
+  subsets: ['latin'],
+});
+
+const dangrek = Dangrek({
+  variable: '--font-dangrek',
+  weight: '400',
   subsets: ['latin'],
 });
 
@@ -27,9 +35,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        className={`${commissioner.variable} ${dangrek.variable} ${titanOne.variable} antialiased`}>
         <Navigation />
-        <main className="w-full relative top-[60px] mx-auto">{children}</main>
+        <div id="container" className="w-full py-[60px] mx-auto">
+          {children}
+        </div>
         <Footer />
       </body>
     </html>
