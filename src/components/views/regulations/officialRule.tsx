@@ -1,10 +1,10 @@
-import Link from 'next/link';
-import { Button } from '@/components/ui/buttons';
-import Image from 'next/image';
 import OP_IMG from '@/assets/image/rules_img_1.png';
-import { REGULATION } from '@/constants/contentDescriptions';
+import { Button } from '@/components/ui/buttons';
 import { CardContainer } from '@/components/ui/CardContainer';
 import { CardItem } from '@/components/ui/CardItem';
+import { REGULATION } from '@/constants/contentDescriptions';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export const OfficialRule = () => {
   return (
@@ -26,7 +26,7 @@ export const OfficialRule = () => {
         <p className="py-2 underline decoration-solid">
           {REGULATION.RULES.OFFICIAL.CURRENT_BANSLIST.BANS_DESCRIPTION}
         </p>
-        <div className="md:w-4/5 border border-border rounded-lg p-2">
+        <div className="md:w-4/5 border border-border rounded-lg p-2 md:mx-4 xl:mx-8">
           <h5 className="decoration-solid">
             {REGULATION.RULES.OFFICIAL.CURRENT_BANSLIST.BANS_SUBTITLE}:
           </h5>

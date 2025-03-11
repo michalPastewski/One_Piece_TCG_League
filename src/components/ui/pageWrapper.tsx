@@ -11,7 +11,7 @@ export const PageWrapper: React.FC<PageWrapperProps> = ({
   label,
 }) => {
   return (
-    <main className="w-4/5 lg:w-3/5 xl:w-1/2 mx-auto z-20">
+    <main className="w-11/12 md:w-4/5 lg:w-3/5 xl:w-1/2 mx-auto z-20">
       {label && (
         <header className="flex flex-col items-center  text-center mt-4 md:mt-8">
           <h2 className="header_3 md:text-3xl lg:text-4xl">

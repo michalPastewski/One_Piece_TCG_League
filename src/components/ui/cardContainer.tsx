@@ -1,5 +1,5 @@
 type CardContainerProps = {
-  children: ReactNode;
+  children: React.ReactNode;
 };
 
 export const CardContainer: React.FC<CardContainerProps> = ({ children }) => {

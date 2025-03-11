@@ -1,6 +1,6 @@
 import { SpecialButton } from '@/components/ui/buttons';
 import { PageWrapper } from '@/components/ui/pageWrapper';
-import {RulesSection} from '@/components/views/regulations/rulesSection';
+import { RulesSection } from '@/components/views/regulations/rulesSection';
 
 export default function Regulations() {
   return (
@@ -11,7 +11,7 @@ export default function Regulations() {
         <SpecialButton label="Rules"></SpecialButton>
         <SpecialButton label="Format"></SpecialButton>
       </section>
-        <RulesSection />
+      <RulesSection />
     </PageWrapper>
   );
 }

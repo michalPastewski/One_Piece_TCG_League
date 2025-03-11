@@ -1,8 +1,7 @@
-// import OP_IMG from '@/assets/image/rules_img_1.png';
-// import { Button } from '@/components/ui/buttons';
+import { RecordingSection } from '@/components/views/regulations/recordingSection';
 import { REGULATION } from '@/constants/contentDescriptions';
-// import Image from 'next/image';
-// import Link from 'next/link';
+import { DeckSection } from './deckSection';
+import { MatchupSection } from './matchupSection';
 import { OfficialRule } from './officialRule';
 
 export const RulesSection = () => {
@@ -12,6 +11,9 @@ export const RulesSection = () => {
         {REGULATION.RULES.TITLE}
       </h3>
       <OfficialRule />
+      <MatchupSection />
+      <RecordingSection />
+      <DeckSection />
     </section>
   );
 };

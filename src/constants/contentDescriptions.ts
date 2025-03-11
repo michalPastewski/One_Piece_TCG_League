@@ -54,9 +54,12 @@ export const REGULATION = {
       TITLE: 'Recording Rules',
       ITEMS_TITLE: 'The recording must contain the following:',
       ITEMS: {
-        ITEM_1: '',
-        ITEM_2: '',
-        ITEM_3: '',
+        ITEM_1:
+          'The decklist needs to be visible in the beginning before every matchup.',
+        ITEM_2:
+          'If there are 2 recordings (one video recording for every match), this needs to be done before every match.',
+        ITEM_3:
+          'This can be done by laying out a proper deck with the same cards beside each other on the playmat visibly in the recording. Afterwards, all cards need to be visible all the time on the recording including when shuffling and also the handcards. See photo as example below.',
       },
       DESCRIPTION:
         'In case of playing when using the Batsu App, the decklist needs to be shown before the matches and the name of the decklist needs to be clearly different from other decklist names in the SIm.',
