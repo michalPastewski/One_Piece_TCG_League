@@ -3,5 +3,5 @@ export const NAV_LINKS = {
   leadership: { name: 'Leaderboard', path: '/leaderboard' },
   regulations: { name: 'Regulations', path: '/regulations/format' },
   matchUps: { name: 'Match-Ups', path: '/match-ups' },
-  about: { name: 'About', path: '/about' },
+  news: { name: 'News', path: '/news' },
 };
