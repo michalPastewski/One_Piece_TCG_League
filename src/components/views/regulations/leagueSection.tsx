@@ -1,6 +1,6 @@
 import FORMAT_IMG from '@/assets/image/format_igm.png';
-import { CardContainer } from '@/components/ui/CardContainer';
-import { CardItem } from '@/components/ui/CardItem';
+import { CardContainer } from '@/components/ui/cardContainer';
+import { CardItem } from '@/components/ui/cardItem';
 import { REGULATION } from '@/constants/contentDescriptions';
 import Image from 'next/image';
 
