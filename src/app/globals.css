@@ -15,6 +15,10 @@
   --accent-dark-color: #0B3075;
   --border-color: #412A1E;
   --shadow-color: #422a1d93;
+  --error-color: #c51717;
+  --success-color: #00ad00;
+  --warning-color: #d1c000;
+  --disabled-color: #9b7e6f;
 }
 
 /* TODO: create the dark mode color pallet */
