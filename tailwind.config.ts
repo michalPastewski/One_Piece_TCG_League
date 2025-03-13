@@ -21,6 +21,10 @@ export default {
         accentDark: 'var(--accent-dark-color)',
         border: 'var(--border-color)',
         shadow: 'var(--shadow-color:)',
+        warning: 'var(--warning-color)',
+        error: 'var(--error-color)',
+        success: 'var(--success-color)',
+        disabled: 'var(--disabled-color)',
       },
       fontFamily: {
         titanOne: ['var(--font-titan-one)'],
