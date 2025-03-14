@@ -39,22 +39,20 @@ export const NavigationMenu: React.FC<NavMenuProps> = ({
 
       {linksList.map((link, i) => {
         return isMobile ? (
-          <li key={i}>
-            <Link
-              href={NAV_LINKS[link].path}
-              onClick={handleOnClose}
-              className="nav-link-mobile basic-mobile-hover basic-active">
-              {NAV_LINKS[link].name}
-            </Link>
-          </li>
+          <Link
+            href={NAV_LINKS[link].path}
+            onClick={handleOnClose}
+            key={i}
+            className="nav-link-mobile basic-mobile-hover basic-active">
+            {NAV_LINKS[link].name}
+          </Link>
         ) : (
-          <li key={i}>
-            <Link
-              href={NAV_LINKS[link].path}
-              className="nav-link basic-hover basic-active">
-              {NAV_LINKS[link].name}
-            </Link>
-          </li>
+          <Link
+            href={NAV_LINKS[link].path}
+            key={i}
+            className="nav-link basic-hover basic-active">
+            {NAV_LINKS[link].name}
+          </Link>
         );
       })}
 

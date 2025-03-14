@@ -1,5 +1,5 @@
-import { CardContainer } from '@/components/ui/CardContainer';
-import { CardItem } from '@/components/ui/CardItem';
+import { CardContainer } from '@/components/ui/cardContainer';
+import { CardItem } from '@/components/ui/cardItem';
 import { REGULATION } from '@/constants/contentDescriptions';
 
 const wayItems = Object.values(REGULATION.FORMAT.MATCH_SYSTEM.WAYS);
@@ -20,7 +20,6 @@ export const MatchSection = () => {
             );
           })}
         </ol>
-        
         <p className="p-1 md:p-4 mt-2 text-primary font-semibold">
           {REGULATION.FORMAT.MATCH_SYSTEM.DESCRIPTION_2}
         </p>
