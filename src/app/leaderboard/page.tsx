@@ -7,7 +7,7 @@ import Image from 'next/image';
 // TODO: add real data from server!!
 const DB_SEASONS: string[] = ['season_1', 'season_2', 'season_3'];
 const DB_LEADERBOARD = {
-  headers: ['Rank', 'Nick', 'Points', 'W', 'L', 'Conf', 'Leader'],
+  headers: ['Rank', 'Nick', 'Points', 'W', 'L', 'Conf', 'Leader', 'City'],
   body: [
     {
       rank: 1,
@@ -17,6 +17,7 @@ const DB_LEADERBOARD = {
       L: 1,
       conf: 4,
       leader: 'Read Shanks',
+      city: 'Gdańsk',
     },
     {
       rank: 2,
@@ -26,6 +27,7 @@ const DB_LEADERBOARD = {
       L: 2,
       conf: 4,
       leader: 'Blue Dofflamingo',
+      city: '',
     },
     {
       rank: 3,
@@ -35,6 +37,17 @@ const DB_LEADERBOARD = {
       L: 4,
       conf: 4,
       leader: 'Yellow Enel',
+      city: '',
+    },
+    {
+      rank: 3,
+      nick: 'LOLO',
+      points: 5,
+      W: 0,
+      L: 4,
+      conf: 4,
+      leader: 'PASTA BLASTA',
+      city: 'New Port',
     },
   ],
 };
