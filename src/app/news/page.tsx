@@ -1,9 +1,9 @@
 import { PageWrapper } from '@/components/ui/pageWrapper';
 
-export default function About() {
+export default function Leadership() {
   return (
-    <PageWrapper label="ABOUT">
-      <p>ABOUT</p>
+    <PageWrapper label="News">
+      <p>NEWS</p>
     </PageWrapper>
   );
 }
