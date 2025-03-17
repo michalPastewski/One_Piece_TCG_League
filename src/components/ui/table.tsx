@@ -9,9 +9,20 @@ interface LeaderData {
   city?: string;
 }
 
+interface MatchesData {
+  week: number;
+  date?: string;
+  confirm?: boolean;
+  pilot_1: string;
+  leader_1: string;
+  pilot_2: string;
+  leader_2: string;
+  result: string;
+}
+
 type TableProps = {
   headerData: string[];
-  bodyData: LeaderData[];
+  bodyData: LeaderData[] | MatchesData[];
 };
 
 export const Table: React.FC<TableProps> = ({ headerData, bodyData }) => {
@@ -21,7 +32,7 @@ export const Table: React.FC<TableProps> = ({ headerData, bodyData }) => {
         <thead className="border-y-2 border-primary  md:text-lg bg-secondaryLight">
           <tr>
             {headerData.map((title, index) => (
-              <th key={index} className="px-1 py-2 md:p-2">
+              <th key={index} className="p-2">
                 {title}
               </th>
             ))}
