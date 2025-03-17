@@ -18,14 +18,12 @@ export default function Home() {
           <p className="mt-4">{HOME.CONTENT.DESCRIPTION}</p>
           <p className="mt-2 text-primary">{HOME.CONTENT.DESCRIPTION_NIT}</p>
           <div className="flex flex-col items-center gap-4 text-sm mt-4">
-            <Button>
-              <Link href="/regulations">
-                Find out more about the Format here!
-              </Link>
-            </Button>
-            <Button appearance="accent">
-              <Link href="/">Sign up</Link>
-            </Button>
+            <Link href="/regulations/format">
+              <Button>Find out more about the Format here!</Button>
+            </Link>
+            <Link href="/">
+              <Button appearance="accent">Sign up</Button>
+            </Link>
           </div>
         </article>
       </PageWrapper>

@@ -5,20 +5,25 @@ import { ReactNode } from 'react';
 type SpecialButtonProp = {
   label: string;
   children?: ReactNode;
+  onClick?: () => void;
+
 };
 
 export const SpecialButton: React.FC<SpecialButtonProp> = ({
   label,
   children,
+  onClick,
 }) => {
   return (
-    <button className="relative hover:scale-125 hover:text-secondary transition-scale duration-75 ease-out">
+    <button
+      className="relative hover:scale-125 active:text-accent transition-scale duration-75 ease-out"
+      onClick={onClick}>
       <Image
         src={Button_BG}
         alt="hero button background"
         className="w-28 h-9 md:w-36 md:h-12"
       />
-      <span className="absolute top-2.5 md:top-3.5 left-8 text-sm md:text-base">
+      <span className="absolute top-2.5 md:top-3.5 left-8 text-secondary text-sm md:text-base">
         {label}
       </span>
       {children}

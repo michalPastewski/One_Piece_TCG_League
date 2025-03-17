@@ -1,9 +1,9 @@
-import { HeaderWrapper } from '@/components/ui/pageWrapper';
+import { PageWrapper } from '@/components/ui/pageWrapper';
 
 export default function About() {
   return (
-    <HeaderWrapper label="ABOUT">
-      <p>hello</p>
-    </HeaderWrapper>
-  );
+    <PageWrapper label="ABOUT">
+      <p>ABOUT</p>
+    </PageWrapper>
+ );
 }

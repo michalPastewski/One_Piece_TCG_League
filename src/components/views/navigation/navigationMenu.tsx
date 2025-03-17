@@ -10,6 +10,8 @@ type NavMenuProps = {
   onClose: (isOpen: boolean) => void;
 };
 
+const linksList = Object.keys(NAV_LINKS) as Array<keyof typeof NAV_LINKS>;
+
 export const NavigationMenu: React.FC<NavMenuProps> = ({
   isMobile,
   isOpen,
@@ -18,10 +20,6 @@ export const NavigationMenu: React.FC<NavMenuProps> = ({
   const handleOnClose = () => {
     onClose(!isOpen);
   };
-
-  const linksList: string[] = Object.values(NAV_LINKS);
-  const linkFormatter = (linkName: string) =>
-    linkName === 'Home' ? '' : linkName.toLowerCase();
 
   return (
     <ul
@@ -41,17 +39,20 @@ export const NavigationMenu: React.FC<NavMenuProps> = ({
 
       {linksList.map((link, i) => {
         return isMobile ? (
-          <li
+          <Link
+            href={NAV_LINKS[link].path}
+            onClick={handleOnClose}
             key={i}
             className="nav-link-mobile basic-mobile-hover basic-active">
-            <Link href={`/${linkFormatter(link)}`} onClick={handleOnClose}>
-              {link}
-            </Link>
-          </li>
+            {NAV_LINKS[link].name}
+          </Link>
         ) : (
-          <li key={i} className="nav-link basic-hover basic-active">
-            <Link href={`/${linkFormatter(link)}`}>{link}</Link>
-          </li>
+          <Link
+            href={NAV_LINKS[link].path}
+            key={i}
+            className="nav-link basic-hover basic-active">
+            {NAV_LINKS[link].name}
+          </Link>
         );
       })}
 
