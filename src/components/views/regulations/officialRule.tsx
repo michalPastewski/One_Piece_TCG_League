@@ -1,7 +1,7 @@
 import OP_IMG from '@/assets/image/rules_img_1.png';
 import { Button } from '@/components/ui/buttons';
-import { CardContainer } from '@/components/ui/CardContainer';
-import { CardItem } from '@/components/ui/CardItem';
+import { CardContainer } from '@/components/ui/cardContainer';
+import { CardItem } from '@/components/ui/cardItem';
 import { REGULATION } from '@/constants/contentDescriptions';
 import Image from 'next/image';
 import Link from 'next/link';
