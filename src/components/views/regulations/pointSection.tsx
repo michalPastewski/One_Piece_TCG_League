@@ -1,5 +1,5 @@
-import { CardContainer } from '@/components/ui/CardContainer';
-import { CardItem } from '@/components/ui/CardItem';
+import { CardContainer } from '@/components/ui/cardContainer';
+import { CardItem } from '@/components/ui/cardItem';
 import { REGULATION } from '@/constants/contentDescriptions';
 
 const pointItems = Object.values(REGULATION.FORMAT.LEAGUE_POINT_SYSTEM.ITEMS);

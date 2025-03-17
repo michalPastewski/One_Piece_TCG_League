@@ -5,5 +5,5 @@ export default function About() {
     <PageWrapper label="ABOUT">
       <p>ABOUT</p>
     </PageWrapper>
- );
+  );
 }
