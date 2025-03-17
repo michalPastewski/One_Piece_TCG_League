@@ -1,7 +1,7 @@
 import RECORDING_IMG from '@/assets/image/recording-rules-img-1.jpg';
 import SETUP_IMG from '@/assets/image/recording-rules-img-2.png';
-import { CardContainer } from '@/components/ui/CardContainer';
-import { CardItem } from '@/components/ui/CardItem';
+import { CardContainer } from '@/components/ui/cardContainer';
+import { CardItem } from '@/components/ui/cardItem';
 import { ImageWithLabel } from '@/components/ui/imageWithLabel';
 import { REGULATION } from '@/constants/contentDescriptions';
 
