@@ -25,6 +25,7 @@ export default {
         error: 'var(--error-color)',
         success: 'var(--success-color)',
         disabled: 'var(--disabled-color)',
+
       },
       fontFamily: {
         titanOne: ['var(--font-titan-one)'],
