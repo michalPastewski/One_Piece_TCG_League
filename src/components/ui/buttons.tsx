@@ -6,7 +6,6 @@ type SpecialButtonProp = {
   label: string;
   children?: ReactNode;
   onClick?: () => void;
-
 };
 
 export const SpecialButton: React.FC<SpecialButtonProp> = ({
