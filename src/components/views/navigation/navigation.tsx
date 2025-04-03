@@ -12,7 +12,7 @@ export const Navigation = () => {
   const isMobile: boolean = useIsMobile() ?? false;
 
   return (
-    <nav className="fixed flex items-center justify-between w-screen h-[60px] px-2 lg:px-4 z-50 bg-primary font-commissioner">
+    <nav className="fixed flex items-center justify-between w-screen h-[60px] px-2 lg:px-4 z-50 bg-primary">
       {isMobile && <Menu className="w-9 h-8" onClick={() => setIsOpen(true)} />}
       <Image
         src={NavLogo}
@@ -21,7 +21,7 @@ export const Navigation = () => {
       />
       <Link
         href="/"
-        className={`border-border border p-1 rounded-lg hover:bg-secondaryLight basic-active text-sm order-3`}>
+        className={`border-border border p-1 rounded-lg hover:bg-secondary-light basic-active text-sm order-3`}>
         LOG IN
       </Link>
       <NavigationMenu isMobile={isMobile} isOpen={isOpen} onClose={setIsOpen} />

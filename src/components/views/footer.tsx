@@ -8,7 +8,7 @@ export const Footer = () => {
   const isMobile: boolean = useIsMobile() ?? false;
 
   return (
-    <footer className="fixed flex items-center justify-between bottom-0 w-screen h-8 bg-primary p-2  md:py-4 lg:p-6 font-commissioner z-40">
+    <footer className="fixed flex items-center justify-between bottom-0 w-screen h-8 bg-primary p-2  md:py-4 lg:p-6 z-40">
       <div className="flex items-center">
         {!isMobile && (
           <Link href="/">
@@ -38,11 +38,11 @@ export const Footer = () => {
         <p>All rights reserved.</p>
       </div>
       <div className="text-[.7rem]">
-        <button className="border-primary border p-1 rounded-lg hover:bg-secondaryLight basic-active md:text-xs mx-1">
+        <button className="border-primary border p-1 rounded-lg hover:bg-secondary-light basic-active md:text-xs mx-1">
           PL
         </button>
         <span>/</span>
-        <button className="border-primary border p-1 rounded-lg hover:bg-secondaryLight basic-active md:text-xs mx-1">
+        <button className="border-primary border p-1 rounded-lg hover:bg-secondary-light basic-active md:text-xs mx-1">
           EN
         </button>
       </div>

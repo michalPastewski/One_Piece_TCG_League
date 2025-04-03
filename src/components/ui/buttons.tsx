@@ -40,11 +40,11 @@ export const Button: React.FC<ButtonProp> = ({ children, appearance }) => {
 
   switch (appearance) {
     case 'accent':
-      buttonBg = 'bg-accentLight hover:text-border';
+      buttonBg = 'bg-accent-light hover:text-border';
       break;
     case 'revers':
       buttonBg =
-        'bg-primary text-secondary hover:bg-secondaryLight hover:text-border';
+        'bg-primary text-secondary hover:bg-secondary-light hover:text-border';
       break;
     default:
       buttonBg = 'hover:text-border';

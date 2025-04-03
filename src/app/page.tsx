@@ -1,3 +1,4 @@
+import { titanOne } from '@/assets/fonts';
 import { Button } from '@/components/ui/buttons';
 import { PageWrapper } from '@/components/ui/pageWrapper';
 import { Hero } from '@/components/views/home/hero';
@@ -12,7 +13,7 @@ export default function Home() {
       <PageWrapper>
         <NewsSection />
         <article className="text-center md:px-12">
-          <h4 className="mt-12 text-xl md:text-3xl font-titanOne">
+          <h4 className={`${titanOne.className} mt-12 text-xl md:text-3xl`}>
             {HOME.CONTENT.TITLE}
           </h4>
           <p className="mt-4">{HOME.CONTENT.DESCRIPTION}</p>

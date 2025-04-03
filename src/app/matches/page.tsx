@@ -1,3 +1,4 @@
+import { titanOne } from '@/assets/fonts';
 import { Dropdown } from '@/components/ui/dropdown';
 import { PageWrapper } from '@/components/ui/pageWrapper';
 import { Table } from '@/components/ui/table';
@@ -21,14 +22,16 @@ export default function Matches() {
         <section className="mt-4">
           <Dropdown optionsData={DB_SEASONS} />
         </section>
-        <h5 className="w-fit mx-auto text-lg font-titanOne">NEXT MATCH UPS</h5>
+        <h5 className={`${titanOne.className} w-fit mx-auto text-lg`}>
+          NEXT MATCH UPS
+        </h5>
         <Table headerData={HEADER_TITLE} bodyData={NEXT_MATCHES} />
       </div>
       <div className="mt-8">
         <section>
           <Dropdown optionsData={DB_SEASONS} />
         </section>
-        <h5 className="w-fit mx-auto text-lg font-titanOne">
+        <h5 className={`${titanOne.className} w-fit mx-auto text-lg`}>
           PREVIOUS MATCH UPS
         </h5>
         <Table headerData={HEADER_TITLE} bodyData={PREV_MATCHUPS} />

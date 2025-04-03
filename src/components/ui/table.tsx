@@ -29,7 +29,7 @@ export const Table: React.FC<TableProps> = ({ headerData, bodyData }) => {
   return (
     <div className="overflow-auto">
       <table className="mt-4 min-w-full text-sm table-auto border-b border-primary border-collapse overflow-x-hidden">
-        <thead className="border-y-2 border-primary  md:text-lg bg-secondaryLight">
+        <thead className="border-y-2 border-primary  md:text-lg bg-secondary-light">
           <tr>
             {headerData.map((title, index) => (
               <th key={index} className="p-2">
@@ -42,7 +42,7 @@ export const Table: React.FC<TableProps> = ({ headerData, bodyData }) => {
           {bodyData.map((user, index) => (
             <tr
               key={index}
-              className="border-y border-primary hover:bg-accentLight hover:border-y-2 hover:border-accentDark">
+              className="border-y border-primary hover:bg-accent-light hover:border-y-2 hover:border-accent-dark">
               {Object.values(user).map((item, index) => (
                 <td key={index + Math.random()} className="md:p-2">
                   {item}

@@ -1,26 +1,8 @@
+import { commissioner } from '@/assets/fonts';
 import { Footer } from '@/components/views/footer';
 import { Navigation } from '@/components/views/navigation/navigation';
 import type { Metadata } from 'next';
-import { Commissioner, Dangrek, Titan_One } from 'next/font/google';
 import './globals.css';
-
-const titanOne = Titan_One({
-  variable: '--font-titan-one',
-  weight: '400',
-  subsets: ['latin'],
-});
-
-const commissioner = Commissioner({
-  variable: '--font-commissioner',
-  weight: '400',
-  subsets: ['latin'],
-});
-
-const dangrek = Dangrek({
-  variable: '--font-dangrek',
-  weight: '400',
-  subsets: ['latin'],
-});
 
 export const metadata: Metadata = {
   title: 'One Piece League',
@@ -34,8 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${commissioner.variable} ${dangrek.variable} ${titanOne.variable} antialiased`}>
+      <body className={`${commissioner.className} antialiased`}>
         <Navigation />
         <div id="container" className="w-full py-[60px] mx-auto">
           {children}
