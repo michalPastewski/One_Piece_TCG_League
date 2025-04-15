@@ -2,7 +2,7 @@ import { titanOne } from '@/assets/fonts';
 import { Dropdown } from '@/components/ui/dropdown';
 import { PageWrapper } from '@/components/ui/pageWrapper';
 import { Table } from '@/components/ui/table';
-import { DB_MATCHUPS, DB_SEASONS } from '@/server/TEST_DATA';
+import { DB_MATCHUPS, DB_SEASONS } from '@/data/TEST_DATA';
 
 const HEADER_TITLE = [
   'Week',

@@ -2,9 +2,8 @@ import BG_IMG from '@/assets/image/leaderboard_img.png';
 import { Dropdown } from '@/components/ui/dropdown';
 import { PageWrapper } from '@/components/ui/pageWrapper';
 import { Table } from '@/components/ui/table';
+import { DB_LEADERBOARD, DB_SEASONS } from '@/data/TEST_DATA';
 import Image from 'next/image';
-import {DB_SEASONS, DB_LEADERBOARD} from '@/server/TEST_DATA';
-
 
 export default function Leadership() {
   return (

@@ -18,7 +18,7 @@ import { Label } from '@radix-ui/react-label';
 import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
-import { completeOnboarding } from '../../services/clerk/_actions';
+import { completeOnboarding } from '../../services/clerk/onboardingActions';
 
 export default function OnboardingPage() {
   const { user } = useUser();
