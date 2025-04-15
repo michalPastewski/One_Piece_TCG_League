@@ -1,17 +1,18 @@
-'use client';
 import { titanOne } from '@/assets/fonts';
 import { Button } from '@/components/ui/buttons';
 import { PageWrapper } from '@/components/ui/pageWrapper';
 import { Hero } from '@/components/views/home/hero';
 import { NewsSection } from '@/components/views/home/newsSection';
 import { HOME } from '@/constants/contentDescriptions';
-import { SignInButton, useAuth } from '@clerk/nextjs';
+import { SignInButton } from '@clerk/nextjs';
+import { auth } from '@clerk/nextjs/server';
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
 
-export default function Home() {
-  const { isSignedIn } = useAuth();
-  if (isSignedIn) {
+export default async function Home() {
+  const { userId } = await auth();
+
+  if (userId) {
     redirect('/dashboard');
   }
 
