@@ -1,5 +1,5 @@
 import SideMenuImage from '@/assets/image/sidebar-one-piece.png';
-import { NAV_LINKS } from '@/constants/navigation';
+import { NavLinks } from '@/constants/navigation';
 import { X } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -8,14 +8,14 @@ type NavMenuProps = {
   isMobile: boolean;
   isOpen: boolean;
   onClose: (isOpen: boolean) => void;
+  navLinks: NavLinks;
 };
-
-const linksList = Object.keys(NAV_LINKS) as Array<keyof typeof NAV_LINKS>;
 
 export const NavigationMenu: React.FC<NavMenuProps> = ({
   isMobile,
   isOpen,
   onClose,
+  navLinks,
 }) => {
   const handleOnClose = () => {
     onClose(!isOpen);
@@ -37,21 +37,21 @@ export const NavigationMenu: React.FC<NavMenuProps> = ({
         />
       )}
 
-      {linksList.map((link, i) => {
+      {navLinks.map((link, i) => {
         return isMobile ? (
           <Link
-            href={NAV_LINKS[link].path}
+            href={link.path}
             onClick={handleOnClose}
             key={i}
             className="nav-link-mobile basic-mobile-hover basic-active">
-            {NAV_LINKS[link].name}
+            {link.name}
           </Link>
         ) : (
           <Link
-            href={NAV_LINKS[link].path}
+            href={link.path}
             key={i}
             className="nav-link basic-hover basic-active">
-            {NAV_LINKS[link].name}
+            {link.name}
           </Link>
         );
       })}

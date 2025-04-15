@@ -1,12 +1,20 @@
+'use client';
 import { titanOne } from '@/assets/fonts';
 import { Button } from '@/components/ui/buttons';
 import { PageWrapper } from '@/components/ui/pageWrapper';
 import { Hero } from '@/components/views/home/hero';
 import { NewsSection } from '@/components/views/home/newsSection';
 import { HOME } from '@/constants/contentDescriptions';
+import { SignInButton, useAuth } from '@clerk/nextjs';
 import Link from 'next/link';
+import { redirect } from 'next/navigation';
 
 export default function Home() {
+  const { isSignedIn } = useAuth();
+  if (isSignedIn) {
+    redirect('/dashboard');
+  }
+
   return (
     <>
       <Hero />
@@ -22,9 +30,9 @@ export default function Home() {
             <Link href="/regulations/format">
               <Button>Find out more about the Format here!</Button>
             </Link>
-            <Link href="/">
+            <SignInButton>
               <Button appearance="accent">Sign up</Button>
-            </Link>
+            </SignInButton>
           </div>
         </article>
       </PageWrapper>

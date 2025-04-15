@@ -5,6 +5,7 @@ import { ReactNode } from 'react';
 type SpecialButtonProp = {
   label: string;
   children?: ReactNode;
+  className?: string;
   onClick?: () => void;
 };
 
@@ -12,10 +13,11 @@ export const SpecialButton: React.FC<SpecialButtonProp> = ({
   label,
   children,
   onClick,
+  className,
 }) => {
   return (
     <button
-      className="relative hover:scale-125 active:text-accent transition-scale duration-75 ease-out"
+      className={`relative hover:scale-125 active:text-accent transition-scale duration-75 ease-out ${className}`}
       onClick={onClick}>
       <Image
         src={Button_BG}
@@ -33,9 +35,14 @@ export const SpecialButton: React.FC<SpecialButtonProp> = ({
 type ButtonProp = {
   children: ReactNode;
   appearance?: 'base' | 'accent' | 'revers';
+  className?: string;
 };
 
-export const Button: React.FC<ButtonProp> = ({ children, appearance }) => {
+export const Button: React.FC<ButtonProp> = ({
+  children,
+  appearance,
+  className,
+}) => {
   let buttonBg = '';
 
   switch (appearance) {
@@ -53,7 +60,7 @@ export const Button: React.FC<ButtonProp> = ({ children, appearance }) => {
 
   return (
     <button
-      className={`w-fit p-2 px-4 border border-border rounded-lg button_shadow hover:bg-secondary ${buttonBg}`}>
+      className={`w-fit p-2 px-4 border border-border rounded-lg button_shadow hover:bg-secondary ${buttonBg} ${className}`}>
       {children}
     </button>
   );

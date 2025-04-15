@@ -1,6 +1,7 @@
 import { titanOne } from '@/assets/fonts';
 import { SpecialButton } from '@/components/ui/buttons';
 import { HOME } from '@/constants/contentDescriptions';
+import { SignInButton } from '@clerk/nextjs';
 import Link from 'next/link';
 
 export const Header = () => {
@@ -14,9 +15,9 @@ export const Header = () => {
         <h3 className="text-2xl md:text-3xl font-semibold">TCG LEAGUE</h3>
       </div>
       <div className="flex md:flex-col md:m-auto gap-6 col-span-2 md:col-start-2 md:row-start-2 md:row-end-4 font-semibold justify-self-center md:content-center">
-        <Link href="/">
+        <SignInButton>
           <SpecialButton label="Join us" />
-        </Link>
+        </SignInButton>
         <Link href="/regulations/format">
           <SpecialButton label="Format" />
         </Link>

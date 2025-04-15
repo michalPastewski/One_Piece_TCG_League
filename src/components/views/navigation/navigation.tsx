@@ -1,13 +1,13 @@
 'use client';
 import NavLogo from '@/assets/image/nav_logo.png';
-import { Button } from '@/components/ui/buttons';
+import { Button } from '@/components/ui/button';
 import { NavigationMenu } from '@/components/views/navigation/navigationMenu';
 import { useIsMobile } from '@/hooks/useMobile';
 import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs';
 import { Menu } from 'lucide-react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { Suspense, useState } from 'react';
+import { NAV_LINKS_SIGN_IN, NAV_LINKS_SIGN_OUT } from '@/constants/navigation';
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -23,9 +23,15 @@ export const Navigation = () => {
       />
       <Suspense>
         <SignedOut>
-          <div className="w-[50px] h-[50px] order-3">
-            <SignInButton>Sign In</SignInButton>
-          </div>
+          <NavigationMenu
+            isMobile={isMobile}
+            isOpen={isOpen}
+            onClose={setIsOpen}
+            navLinks={NAV_LINKS_SIGN_OUT}
+          />
+          <SignInButton>
+            <Button className="">Sign In</Button>
+          </SignInButton>
         </SignedOut>
       </Suspense>
       <Suspense>
@@ -34,6 +40,7 @@ export const Navigation = () => {
             isMobile={isMobile}
             isOpen={isOpen}
             onClose={setIsOpen}
+            navLinks={NAV_LINKS_SIGN_IN}
           />
           <div className="w-[50px] h-[50px] order-3">
             <UserButton
