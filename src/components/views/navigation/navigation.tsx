@@ -1,11 +1,13 @@
 'use client';
 import NavLogo from '@/assets/image/nav_logo.png';
+import { Button } from '@/components/ui/buttons';
 import { NavigationMenu } from '@/components/views/navigation/navigationMenu';
 import { useIsMobile } from '@/hooks/useMobile';
+import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs';
 import { Menu } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import { Suspense, useState } from 'react';
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -19,12 +21,31 @@ export const Navigation = () => {
         alt="ONE PIECE League image"
         className="w-auto h-14"
       />
-      <Link
-        href="/"
-        className={`border-border border p-1 rounded-lg hover:bg-secondary-light basic-active text-sm order-3`}>
-        LOG IN
-      </Link>
-      <NavigationMenu isMobile={isMobile} isOpen={isOpen} onClose={setIsOpen} />
+      <Suspense>
+        <SignedOut>
+          <div className="w-[50px] h-[50px] order-3">
+            <SignInButton>Sign In</SignInButton>
+          </div>
+        </SignedOut>
+      </Suspense>
+      <Suspense>
+        <SignedIn>
+          <NavigationMenu
+            isMobile={isMobile}
+            isOpen={isOpen}
+            onClose={setIsOpen}
+          />
+          <div className="w-[50px] h-[50px] order-3">
+            <UserButton
+              appearance={{
+                elements: {
+                  userButtonAvatarBox: { width: '100%', height: '100%' },
+                },
+              }}
+            />
+          </div>
+        </SignedIn>
+      </Suspense>
     </nav>
   );
 };

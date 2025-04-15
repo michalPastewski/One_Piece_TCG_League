@@ -1,6 +1,7 @@
 import { commissioner } from '@/assets/fonts';
 import { Footer } from '@/components/views/footer';
 import { Navigation } from '@/components/views/navigation/navigation';
+import { ClerkProvider } from '@clerk/nextjs';
 import type { Metadata } from 'next';
 import './globals.css';
 
@@ -15,14 +16,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${commissioner.className} antialiased`}>
-        <Navigation />
-        <div id="container" className="w-full py-[60px] mx-auto">
-          {children}
-        </div>
-        <Footer />
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body className={`${commissioner.className} antialiased`}>
+          <Navigation />
+          <div id="container" className="w-full py-[60px] mx-auto">
+            {children}
+          </div>
+          <Footer />
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
