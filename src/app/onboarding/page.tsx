@@ -32,6 +32,7 @@ export default function OnboardingPage() {
       discordName: '',
       leader: '',
       cardsDeck: '',
+      city: '',
     },
   });
 
@@ -132,6 +133,22 @@ export default function OnboardingPage() {
                 <Label htmlFor="deck">Cards Deck</Label>
                 <FormControl>
                   <Input id="deck" placeholder="Your deck " {...field} />
+                </FormControl>
+                <FormDescription>
+                  You can set it later in your profile.
+                </FormDescription>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={registrationForm.control}
+            name="city"
+            render={({ field }) => (
+              <FormItem>
+                <Label htmlFor="city">City</Label>
+                <FormControl>
+                  <Input id="city" placeholder="Your city" {...field} />
                 </FormControl>
                 <FormDescription>
                   You can set it later in your profile.

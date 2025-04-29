@@ -24,6 +24,7 @@ export const completeOnboarding = async (
         discordName: formData.discordName,
         leader: formData.leader,
         cardsDeck: formData.cardsDeck,
+        city: formData.city,
       },
     });
     return { message: res.publicMetadata };

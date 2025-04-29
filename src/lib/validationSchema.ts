@@ -11,4 +11,5 @@ export const onboardingSchema = z.object({
   discordName: z.string().min(1, { message: 'Discord Name is required' }),
   leader: z.string().optional(),
   cardsDeck: z.string().optional(),
+  city: z.string().optional(),
 });

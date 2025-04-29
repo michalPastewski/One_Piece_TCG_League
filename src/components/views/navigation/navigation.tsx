@@ -2,12 +2,12 @@
 import NavLogo from '@/assets/image/nav_logo.png';
 import { Button } from '@/components/ui/button';
 import { NavigationMenu } from '@/components/views/navigation/navigationMenu';
+import { NAV_LINKS_SIGN_IN, NAV_LINKS_SIGN_OUT } from '@/constants/navigation';
 import { useIsMobile } from '@/hooks/useMobile';
 import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs';
 import { Menu } from 'lucide-react';
 import Image from 'next/image';
 import { Suspense, useState } from 'react';
-import { NAV_LINKS_SIGN_IN, NAV_LINKS_SIGN_OUT } from '@/constants/navigation';
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
