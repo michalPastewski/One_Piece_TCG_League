@@ -14,7 +14,7 @@ export const UserTable = pgTable('users', {
   imageUrl: text(),
   deletedAt: timestamp({ withTimezone: true }),
   bandaiTCG: text().notNull(),
-  discordName: text(),
+  discordName: text().notNull(),
   leader: text(),
   cardsDeck: text(),
   city: text(),

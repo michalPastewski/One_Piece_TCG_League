@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
 export const onboardingSchema = z.object({
-  username: z.string().min(1, { message: 'Username is required' }),
+  name: z.string().min(1, { message: 'Username is required' }),
   bandaiTCG: z
     .string()
     .min(2)

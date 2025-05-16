@@ -8,6 +8,8 @@ export default defineConfig({
   schema: './src/services//drizzle/schema.ts',
   out: './src/services/drizzle/migrations',
   dialect: 'postgresql',
+  strict: true,
+  verbose: true,
   dbCredentials: {
     url: process.env.DATABASE_URL,
   },

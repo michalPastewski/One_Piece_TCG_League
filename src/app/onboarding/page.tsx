@@ -27,7 +27,7 @@ export default function OnboardingPage() {
   const registrationForm = useForm<z.infer<typeof onboardingSchema>>({
     resolver: zodResolver(onboardingSchema),
     defaultValues: {
-      username: '',
+      name: '',
       bandaiTCG: '',
       discordName: '',
       leader: '',
@@ -57,7 +57,7 @@ export default function OnboardingPage() {
         <form onSubmit={registrationForm.handleSubmit(handleSubmit)}>
           <FormField
             control={registrationForm.control}
-            name="username"
+            name="name"
             render={({ field }) => (
               <FormItem className="mt-4">
                 <Label htmlFor="username">Username</Label>
