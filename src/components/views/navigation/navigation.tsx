@@ -5,9 +5,10 @@ import { NavigationMenu } from '@/components/views/navigation/navigationMenu';
 import { NAV_LINKS_SIGN_IN, NAV_LINKS_SIGN_OUT } from '@/constants/navigation';
 import { useIsMobile } from '@/hooks/useMobile';
 import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs';
-import { Menu } from 'lucide-react';
+import { Menu, UserRoundPen } from 'lucide-react';
 import Image from 'next/image';
 import { Suspense, useState } from 'react';
+import { PilotProfile } from '../pilotProfile';
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -48,8 +49,16 @@ export const Navigation = () => {
                 elements: {
                   userButtonAvatarBox: { width: '100%', height: '100%' },
                 },
-              }}
-            />
+              }}>
+              <UserButton.UserProfilePage
+                label="Pilot Zone"
+                url="custom"
+                labelIcon={<UserRoundPen className="w-4.5 h-4.5" />}>
+                <PilotProfile />
+              </UserButton.UserProfilePage>
+              <UserButton.UserProfilePage label="account" />
+              <UserButton.UserProfilePage label="security" />
+            </UserButton>
           </div>
         </SignedIn>
       </Suspense>

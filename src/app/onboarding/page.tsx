@@ -11,21 +11,21 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { PageWrapper } from '@/components/ui/pageWrapper';
-import { onboardingSchema } from '@/lib/validationSchema';
+import { userProfileSchema } from '@/lib/validationSchema';
 import { SignOutButton, useUser } from '@clerk/nextjs';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Label } from '@radix-ui/react-label';
 import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
-import { completeOnboarding } from '../../services/clerk/onboardingActions';
+import { completeOnboarding } from '../../services/clerk/_actions';
 
 export default function OnboardingPage() {
   const { user } = useUser();
   const router = useRouter();
 
-  const registrationForm = useForm<z.infer<typeof onboardingSchema>>({
-    resolver: zodResolver(onboardingSchema),
+  const registrationForm = useForm<z.infer<typeof userProfileSchema>>({
+    resolver: zodResolver(userProfileSchema),
     defaultValues: {
       name: '',
       bandaiTCG: '',
@@ -36,7 +36,7 @@ export default function OnboardingPage() {
     },
   });
 
-  const handleSubmit = async (formData: z.infer<typeof onboardingSchema>) => {
+  const handleSubmit = async (formData: z.infer<typeof userProfileSchema>) => {
     try {
       const res = await completeOnboarding(formData);
       if (res?.message) {
